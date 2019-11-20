@@ -17,30 +17,28 @@
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .components__navListTop a {
     color: #333;
     text-decoration: none;
+}
+
+.components__navItem {
     margin-right: 50px;
+    background-image: linear-gradient(#ffda00, #ffda00), linear-gradient(transparent, transparent);
+    background-size: 0% 3px, auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: background .2s linear;
+    padding: 33px 0;
 }
 
 .components__navItem a {
     text-decoration: none;
-    background-image: linear-gradient(#ffda00,#ffda00),linear-gradient(#fff,#fff);
-    background-size: 0 3px,auto;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    transition: background .2s linear;
 }
 
-.components__navItem a:hover {
-    background-size: 100% 3px,auto;
-}
-
-#active a {
-    background-image: linear-gradient(#ffda00,#ffda00),linear-gradient(#fff,#fff);
-    background-size: 100% 3px,auto;
-    background-repeat: no-repeat;
-    background-position: bottom;
+.components__navItem:hover, li#active {
+    background-size: 100% 3px, auto;
 }
