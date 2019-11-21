@@ -1,9 +1,12 @@
+body, html {
+    margin: 0;
+}
+
 .components__navigation {
     display: flex;
-    height: 75px;
     align-items: center;
     padding-left: 50px;
-    border-bottom: 4px solid #f5f5f5;
+    background-image: linear-gradient(transparent 90%, #f5f5f5 0);
 }
 
 .components__navigation img {
@@ -17,30 +20,24 @@
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .components__navListTop a {
     color: #333;
     text-decoration: none;
-    margin-right: 50px;
 }
 
-.components__navItem a {
-    text-decoration: none;
-    background-image: linear-gradient(#ffda00,#ffda00),linear-gradient(#fff,#fff);
-    background-size: 0 3px,auto;
+.components__navItem {
+    padding: 20px 0;
+    margin-right: 50px;
+    background-image: linear-gradient(transparent 90%,#ffda00 0);
+    background-size: 0;
     background-repeat: no-repeat;
     background-position: bottom;
     transition: background .2s linear;
 }
 
-.components__navItem a:hover {
-    background-size: 100% 3px,auto;
-}
-
-#active a {
-    background-image: linear-gradient(#ffda00,#ffda00),linear-gradient(#fff,#fff);
-    background-size: 100% 3px,auto;
-    background-repeat: no-repeat;
-    background-position: bottom;
+.components__navItem:hover, .active {
+    background-size: 100%;
 }
