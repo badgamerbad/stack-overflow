@@ -1,0 +1,32 @@
+body {
+    /* overflow: hidden; */
+    height: 200px;
+}
+
+.gradient {
+    height: 100%;
+    /* width: 100%; */
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+    background: linear-gradient(90deg, red, blue);
+    /* background-size: 0; */
+    background-repeat: no-repeat;
+}
+
+.animate {
+    -webkit-animation: animate 10s ease infinite ;
+    animation: animate 10s ease infinite ;
+}
+
+@keyframes animate {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* @-webkit-keyframes animate {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+} */
