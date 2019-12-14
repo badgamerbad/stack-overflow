@@ -1,0 +1,10 @@
+{
+    "exclude": [
+        "b.ts",
+    ],
+    "compilerOptions": {
+        "module": "amd",
+        "sourceMap": true,
+        "out": "foo.js",
+    }
+}
