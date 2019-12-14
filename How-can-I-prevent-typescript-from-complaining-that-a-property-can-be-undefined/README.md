@@ -1,1 +1,0 @@
-# How can I prevent typescript from complaining that a property can be undefined
