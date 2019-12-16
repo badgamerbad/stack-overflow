@@ -9,6 +9,7 @@ import { Node } from "@alfresco/js-api";
 export class AppComponent {
   title = 'typescript-compiler-in-Angular';
   selectedNode: Node;
+  foo;
 
   constructor(){
     this.log(123);
@@ -17,5 +18,6 @@ export class AppComponent {
 
   log(someArg: Object) {
     console.log(someArg);
+    this.foo = null;
   }
 }
