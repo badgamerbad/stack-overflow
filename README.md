@@ -8,7 +8,6 @@ Contributions to Stack overflow for the devlopers community
 - [x] - Typescript compiler in Angular
 - [ ] - Is it possible to use eslint with Angular-CLI
 - [x] - Why doesn't my page show me my '.wall' anymore after i clicked on the right “arrow”
-- [ ] - How to fetch all the documents of a collection and it's sub collection efficiently
 
 ### Inactive questions
 - [ ] - How to fetch firestore data via reference value in a key
