@@ -8,6 +8,7 @@ Contributions to Stack overflow for the devlopers community
 - [x] - Typescript compiler in Angular
 - [ ] - Is it possible to use eslint with Angular-CLI
 - [x] - Why doesn't my page show me my '.wall' anymore after i clicked on the right “arrow”
+- [ ] - json is returned in Django how to read it in javascript using http
 
 ### Inactive questions
 - [ ] - How to fetch firestore data via reference value in a key
