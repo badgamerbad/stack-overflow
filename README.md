@@ -5,5 +5,4 @@ contributions to Stack overflow for the devlopers community
 - [ ] - linear gradient animation not working on any browser?
 - [x] - Typescript compiler in Angular
 - [ ] - Is it possible to use eslint with Angular-CLI
-- [ ] - Problem: Why is React updating my parent when i am setting state in children? Only happens to array
 - [x] - Why doesn't my page show me my '.wall' anymore after i clicked on the right “arrow”
