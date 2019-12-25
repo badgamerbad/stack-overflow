@@ -19,11 +19,7 @@ function getTasks(accountId) {
 }
 
 function getCheckLists(accountId, taskId) {
-    return db.collection('someTopLevelDB')
-        .doc(accountId)
-        .collection('tasks')
-        .doc(taskId)
-        .collection('checkLists')
+    return db.collectionGroup('checkLists')
         // .where('deleted', '==', false)
         .get();
 }
