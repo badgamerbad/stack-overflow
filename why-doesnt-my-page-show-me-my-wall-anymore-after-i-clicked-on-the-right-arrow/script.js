@@ -15,12 +15,16 @@ bRechts.addEventListener('click', klikRechts);
 
 
 function klikLinks() {
+    $(".wall").hide();
+    $('.close').hide();
     console.log('links geklikt');
     index = (index > 0) ? index - 1 : 0;
     container.style.transform = 'translateX(' + (index) * -25 + '%)';
 }
 
 function klikRechts() {
+    $(".wall").hide();
+    $('.close').hide();
     console.log('rechts geklikt');
     index = (index < 4 - 1) ? index + 1 : 3;
     container.style.transform = 'translateX(' + (index) * -25 + '%)';

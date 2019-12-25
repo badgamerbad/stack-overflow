@@ -1,12 +1,10 @@
 $('.close').hide();
-$(".item[data-toggle]").on("click", function(e) {
-    e.preventDefault();
-    var selector = $(this).data("toggle");  // get corresponding element
+$(".item").on("click", function(e) {
     $(".wall").hide();
-    $(selector).show();
+    var childId = $(e.currentTarget).data("childid");
+    $("div[data-itemId='" + childId + "']").show();
     $('.close').show();
 });
-
 
 $('.close').click(function(){
     $(".wall").hide();
