@@ -4,6 +4,8 @@
 
 // This example requires the Places library. Include the libraries=places
 // parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -33.8688, lng: 151.2195 },
@@ -69,4 +71,11 @@ function initAutocomplete() {
         });
         map.fitBounds(bounds);
     });
+}
+
+const modal = document.getElementById("myModal");
+modal.onscroll = function(e) {
+    const pacContainer = document.querySelector(".pac-container.pac-logo");
+    let top = window.scrollY + document.getElementById("pac-input").getBoundingClientRect().top;
+    pacContainer.style.top = `${top + 25}px`;
 }
