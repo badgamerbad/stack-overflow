@@ -3,128 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "typescript-compiler-in-Angular": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "projects/typescript-compiler-in-Angular",
-      "sourceRoot": "projects/typescript-compiler-in-Angular/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/typescript-compiler-in-Angular",
-            "index": "projects/typescript-compiler-in-Angular/src/index.html",
-            "main": "projects/typescript-compiler-in-Angular/src/main.ts",
-            "polyfills": "projects/typescript-compiler-in-Angular/src/polyfills.ts",
-            "tsConfig": "projects/typescript-compiler-in-Angular/tsconfig.app.json",
-            "aot": false,
-            "assets": [
-              "projects/typescript-compiler-in-Angular/src/favicon.ico",
-              "projects/typescript-compiler-in-Angular/src/assets"
-            ],
-            "styles": [
-              "projects/typescript-compiler-in-Angular/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/typescript-compiler-in-Angular/src/environments/environment.ts",
-                  "with": "projects/typescript-compiler-in-Angular/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "typescript-compiler-in-Angular:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "typescript-compiler-in-Angular:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "typescript-compiler-in-Angular:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/typescript-compiler-in-Angular/src/test.ts",
-            "polyfills": "projects/typescript-compiler-in-Angular/src/polyfills.ts",
-            "tsConfig": "projects/typescript-compiler-in-Angular/tsconfig.spec.json",
-            "karmaConfig": "projects/typescript-compiler-in-Angular/karma.conf.js",
-            "assets": [
-              "projects/typescript-compiler-in-Angular/src/favicon.ico",
-              "projects/typescript-compiler-in-Angular/src/assets"
-            ],
-            "styles": [
-              "projects/typescript-compiler-in-Angular/src/styles.scss"
-            ],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/typescript-compiler-in-Angular/tsconfig.app.json",
-              "projects/typescript-compiler-in-Angular/tsconfig.spec.json",
-              "projects/typescript-compiler-in-Angular/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/typescript-compiler-in-Angular/e2e/protractor.conf.js",
-            "devServerTarget": "typescript-compiler-in-Angular:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "typescript-compiler-in-Angular:serve:production"
-            }
-          }
-        }
-      }
-    },
     "searching-in-a-column-in-datatable": {
       "projectType": "application",
       "schematics": {
@@ -250,7 +128,128 @@
           }
         }
       }
-    }
-  },
+    },
+    "typescript-compiler-in-Angular": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/typescript-compiler-in-Angular",
+      "sourceRoot": "projects/typescript-compiler-in-Angular/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/typescript-compiler-in-Angular",
+            "index": "projects/typescript-compiler-in-Angular/src/index.html",
+            "main": "projects/typescript-compiler-in-Angular/src/main.ts",
+            "polyfills": "projects/typescript-compiler-in-Angular/src/polyfills.ts",
+            "tsConfig": "projects/typescript-compiler-in-Angular/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/typescript-compiler-in-Angular/src/favicon.ico",
+              "projects/typescript-compiler-in-Angular/src/assets"
+            ],
+            "styles": [
+              "projects/typescript-compiler-in-Angular/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/typescript-compiler-in-Angular/src/environments/environment.ts",
+                  "with": "projects/typescript-compiler-in-Angular/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "typescript-compiler-in-Angular:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "typescript-compiler-in-Angular:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "typescript-compiler-in-Angular:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/typescript-compiler-in-Angular/src/test.ts",
+            "polyfills": "projects/typescript-compiler-in-Angular/src/polyfills.ts",
+            "tsConfig": "projects/typescript-compiler-in-Angular/tsconfig.spec.json",
+            "karmaConfig": "projects/typescript-compiler-in-Angular/karma.conf.js",
+            "assets": [
+              "projects/typescript-compiler-in-Angular/src/favicon.ico",
+              "projects/typescript-compiler-in-Angular/src/assets"
+            ],
+            "styles": [
+              "projects/typescript-compiler-in-Angular/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/typescript-compiler-in-Angular/tsconfig.app.json",
+              "projects/typescript-compiler-in-Angular/tsconfig.spec.json",
+              "projects/typescript-compiler-in-Angular/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/typescript-compiler-in-Angular/e2e/protractor.conf.js",
+            "devServerTarget": "typescript-compiler-in-Angular:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "typescript-compiler-in-Angular:serve:production"
+            }
+          }
+        }
+      }
+    }},
   "defaultProject": "searching-in-a-column-in-datatable"
 }
