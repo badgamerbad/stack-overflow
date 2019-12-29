@@ -1,17 +1,14 @@
 <ul>
-  <li *ngFor="let menu of navItems" (click)="clickedEvent(menu.name)"
-  [ngClass]="setActiveClass(menu.name)"
-  >
+  <li *ngFor="let menu of navItems" (click)="clickedEvent($event)" #thisLiElement [attr.data-selected]="false" [ngClass]="setActiveClass(thisLiElement)">
     <a routerLink="{{menu.path}}">{{menu.label}}
-      <mat-icon *ngIf=" selected != menu.name && menu.children && menu.children.length>0" >expand_more</mat-icon>
-      <mat-icon *ngIf="selected === menu.name && menu.children && menu.children.length>0" >expand_less</mat-icon>
+      <mat-icon *ngIf="menu.children && menu.children.length > 0">{{iconState(thisLiElement)}}</mat-icon> 
     </a>    
     <!-- <ul *ngIf="menu.children && menu.children.length>0" style="padding-left:20px;display:none">
       <li *ngFor="let submenu of menu.children" (click)="selectMenu(menu.name)">
         <a routerLink="{{submenu.path}}">{{submenu.label}}</a>
       </li>
     </ul> -->
-    <app-submenu *ngIf="menu.children && menu.children.length>0" [navItems]="menu.children" (clickedSubMeu)="submenuClicked($event)"></app-submenu>
+    <app-submenu *ngIf="menu.children && menu.children.length > 0" [navItems]="menu.children" (clickedSubMeu)="submenuClicked($event)"></app-submenu>
   </li>
 </ul>
 

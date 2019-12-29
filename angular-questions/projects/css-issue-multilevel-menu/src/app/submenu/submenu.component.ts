@@ -9,16 +9,23 @@ import { Component, OnInit, Input, ViewEncapsulation,Output,EventEmitter } from 
 export class SubmenuComponent{
 
   @Input() navItems : any[]
-  selected : any
-  @Output() clickedSubMeu = new EventEmitter();
+  
   constructor() { }
 
  
 
-  clickedEvent(name){
-    this.selected = this.selected != name ? name : ''
-    this.clickedSubMeu.emit(name)
+  clickedEvent(event){
+    if (event.currentTarget["dataset"].selected === "false")
+      event.currentTarget["dataset"].selected = "true";
+    else 
+      event.currentTarget["dataset"].selected = "false";
   }
-  
 
+  setActiveClass(thisLiElement) {
+    return thisLiElement.dataset.selected === "true" ? { "active": true } : { "active": false };
+  }
+
+  iconState(thisLiElement) {
+    return thisLiElement.dataset.selected === "true" ? "expand_less" : "expand_more";
+  }
 }

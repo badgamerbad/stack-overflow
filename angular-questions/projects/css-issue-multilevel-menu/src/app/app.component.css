@@ -19,6 +19,6 @@ li a:hover {
   color: white;
 }
 
-.active  ul{
-  display:block !important;
+.active > app-submenu > ul {
+  display: block !important;
 }
