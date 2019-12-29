@@ -250,6 +250,128 @@
           }
         }
       }
+    },
+    "css-issue-multilevel-menu": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/css-issue-multilevel-menu",
+      "sourceRoot": "projects/css-issue-multilevel-menu/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/css-issue-multilevel-menu",
+            "index": "projects/css-issue-multilevel-menu/src/index.html",
+            "main": "projects/css-issue-multilevel-menu/src/main.ts",
+            "polyfills": "projects/css-issue-multilevel-menu/src/polyfills.ts",
+            "tsConfig": "projects/css-issue-multilevel-menu/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/css-issue-multilevel-menu/src/favicon.ico",
+              "projects/css-issue-multilevel-menu/src/assets"
+            ],
+            "styles": [
+              "projects/css-issue-multilevel-menu/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/css-issue-multilevel-menu/src/environments/environment.ts",
+                  "with": "projects/css-issue-multilevel-menu/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "css-issue-multilevel-menu:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "css-issue-multilevel-menu:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "css-issue-multilevel-menu:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/css-issue-multilevel-menu/src/test.ts",
+            "polyfills": "projects/css-issue-multilevel-menu/src/polyfills.ts",
+            "tsConfig": "projects/css-issue-multilevel-menu/tsconfig.spec.json",
+            "karmaConfig": "projects/css-issue-multilevel-menu/karma.conf.js",
+            "assets": [
+              "projects/css-issue-multilevel-menu/src/favicon.ico",
+              "projects/css-issue-multilevel-menu/src/assets"
+            ],
+            "styles": [
+              "projects/css-issue-multilevel-menu/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/css-issue-multilevel-menu/tsconfig.app.json",
+              "projects/css-issue-multilevel-menu/tsconfig.spec.json",
+              "projects/css-issue-multilevel-menu/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/css-issue-multilevel-menu/e2e/protractor.conf.js",
+            "devServerTarget": "css-issue-multilevel-menu:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "css-issue-multilevel-menu:serve:production"
+            }
+          }
+        }
+      }
     }},
-  "defaultProject": "searching-in-a-column-in-datatable"
+  "defaultProject": "css-issue-multilevel-menu"
 }

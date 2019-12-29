@@ -1,0 +1,10 @@
+<ul style="padding-left:20px;display:none">
+      <li *ngFor="let menu of navItems" (click)="clickedEvent(menu.name);$event.stopPropagation();">
+        <a routerLink="{{menu.path}}">{{menu.name}}
+          <mat-icon *ngIf=" selected != menu.name && menu.children && menu.children.length>0">expand_more</mat-icon> 
+          <mat-icon *ngIf=" selected === menu.name && menu.children && menu.children.length>0">expand_less</mat-icon>           
+        </a>        
+        <app-submenu *ngIf="menu.children && menu.children.length>0" [navItems]="menu.children"></app-submenu>
+      </li>
+</ul>
+

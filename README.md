@@ -11,8 +11,8 @@ Contributions to Stack overflow for the devlopers community
 - [x] - json is returned in Django how to read it in javascript using http
 - [ ] - Searching in a column in datatable
 - [x] - How to Append google auto complete inside modal
-- [ ] - How can I change the result status in Axios with an adapter?
 - [ ] - How to make an AWS S3 file public accessible using createPresignedPost?
+- [x] - Can't align unordered lists with 'flex-column'
 
 ### Inactive questions
 - [ ] - How to fetch firestore data via reference value in a key
