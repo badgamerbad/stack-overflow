@@ -1,10 +1,10 @@
 <ul style="padding-left:20px;display:none">
-      <li *ngFor="let menu of navItems" (click)="clickedEvent($event); $event.stopPropagation();" #thisLiElement [attr.data-selected]="false" [ngClass]="setActiveClass(thisLiElement)">
+      <li *ngFor="let menu of navItems" (click)="clickedEvent($event, menu.name); $event.stopPropagation();" #thisLiElement [attr.data-selected]="false" [ngClass]="{active: setActiveClass(thisLiElement), 'no-child': !menu.children ? true : menu.children.length == 0 ? true : false}">
         <a routerLink="{{menu.path}}">
           {{menu.name}}
           <mat-icon *ngIf="menu.children && menu.children.length > 0">{{iconState(thisLiElement)}}</mat-icon>         
         </a>        
-        <app-submenu *ngIf="menu.children && menu.children.length>0" [navItems]="menu.children"></app-submenu>
+        <app-submenu *ngIf="menu.children && menu.children.length>0" [navItems]="menu.children" (emitSubMenuClick)="parentMenuListener($event)"></app-submenu>
       </li>
 </ul>
 

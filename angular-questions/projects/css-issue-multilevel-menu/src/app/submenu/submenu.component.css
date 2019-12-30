@@ -1,0 +1,15 @@
+.active.no-child {
+    background: #5e5e5e;
+}
+
+.active.no-child>a {
+    color: #f1f1f1;
+}
+
+.active {
+    background: purple;
+}
+
+.active>a {
+    color: #f1f1f1;
+}

@@ -12,8 +12,6 @@ export class SubmenuComponent{
   
   constructor() { }
 
- 
-
   clickedEvent(event){
     if (event.currentTarget["dataset"].selected === "false")
       event.currentTarget["dataset"].selected = "true";
@@ -22,7 +20,7 @@ export class SubmenuComponent{
   }
 
   setActiveClass(thisLiElement) {
-    return thisLiElement.dataset.selected === "true" ? { "active": true } : { "active": false };
+    return thisLiElement.dataset.selected === "true" ? true : false;
   }
 
   iconState(thisLiElement) {
