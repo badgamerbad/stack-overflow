@@ -15,5 +15,8 @@ Contributions to Stack overflow for the devlopers community
 - [x] - Can't align unordered lists with 'flex-column'
 - [ ] - Facing Css issue in multi Level Menu
 
+### Old One
+- [ ] - [Can we make selenium webdriver to wait until user clicks on a webpage link at ru](https://stackoverflow.com/questions/21036239/can-we-make-selenium-webdriver-to-wait-until-user-clicks-on-a-webpage-link-at-ru)
+
 ### Inactive questions
 - [ ] - How to fetch firestore data via reference value in a key
